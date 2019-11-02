@@ -33,7 +33,7 @@ class OrderDetail extends Model
 
     public function getHotProducts($num){
         for ($i = 1; $i< 10; $i++){
-            $data = $this->where('created_at','>=',Carbon::now()->subDays(5*$i))
+            $data = $this->where('created_at','>=',Carbon::now()->subDays(20*$i))
                     ->groupBy('product_id')
                     ->orderByRaw('sum(product_qty) DESC')
                     ->limit($num)

@@ -54,7 +54,7 @@ class HomeController extends Controller
     {
       
         $spmoi = $this->product->getNewProducts(10);
-        $data = $this->product->getRandProducts(5);
+        $data = $this->product->getRandProducts(3);
         $slider = $this->appearance->getSliderOrderByDateUpdated();
         $banner = $this->appearance->getBannerOrderByDateUpdated();
         $vbanner = $this->appearance->getVBannerOrderByDateUpdated();

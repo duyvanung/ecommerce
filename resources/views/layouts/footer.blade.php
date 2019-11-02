@@ -3,7 +3,7 @@
 		<div class="f1">
 			<div class="col-xs-12 col-sm-3">
 				<div class="tit-boxmain">
-					<h3><span>Phụ kiện Bijing</span></h3>
+					<h3><span>WooMobile</span></h3>
 				</div>
 				<div class="ct-boxft1">
 					<p><span>Chúng tôi chỉ bán hàng chính hãng</span></p>
@@ -46,7 +46,7 @@
 	</div>
 	<div class="copyright">
 		<div class="container">
-			<p>Copyright © 2016 <a href="http://themeviet.org/" target="_blank">Themeviet.org</a>. All Rights Reserved.</p>
+			<p>Copyright © 2019 <a href="http://themeviet.org/" target="_blank">WooMobile.com</a>. All Rights Reserved.</p>
 		</div>
 	</div>
 </footer>

@@ -53,7 +53,7 @@
 		<div class="container">
 			<div class="col-xs-12 col-sm-6 p0 hotline-top">
 				<img src="{{ asset('images/phone-24.png') }}" alt="hotline" />
-				<p>Điện thoại: <a href="tel:01649.629.629">01649.629.629</a></p>
+				<p>Điện thoại: <a href="tel:01649.629.629">036.666.3616</a></p>
 			</div>
 		</div>
 	</div>
@@ -61,7 +61,7 @@
 		<div class="container">
 			<div class="col-xs-12 col-sm-6 col-md-4">
 				<div id="logo">
-					<a href="{{ route('homepage') }}"><img src="{{ asset('images/logo.png') }}" alt=""></a>
+					<a href="{{ route('homepage') }}"><img src="{{ asset('images/logo-1.png') }}" alt=""></a>
 				</div>
 			</div>
 			<div class="col-xs-12 col-sm-6 col-md-5 search-container">
@@ -179,7 +179,7 @@
 				<li><a href="">Tin tức</a></li>
 				<li><a href="">Tư vấn</a></li>
 				<li><a href="{{ url('contact') }}">Liên hệ</a></li>
-				<li><a href="tel:01649.629.629">HOTLINE: 01649.629.629 (từ 8h-22h cả T7,CN)</a></li>
+				<li><a href="tel:01649.629.629">HOTLINE: 036.666.3616 (từ 8h-22h cả T7,CN)</a></li>
 			</ul>
 		</div>
 	</nav>

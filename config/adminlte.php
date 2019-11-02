@@ -30,7 +30,7 @@ return [
     |
     */
 
-    'logo' => 'Phụ kiện <b>BIJING</b>',
+    'logo' => '<b>WooMobile</b>',
 
     'logo_mini' => '<b>A</b>LT',
 
