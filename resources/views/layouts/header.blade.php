@@ -1,4 +1,3 @@
-
 <style type="text/css">
 	.navbar-right{
 		margin-right: 0px;
@@ -6,8 +5,21 @@
 	#search {
 		display: relative;
 	}
+
+	a.navbar-brand {
+    	font-size: 16px !important;
+    	padding: 0px 16px !important;
+		margin: 0px !important;
+    	color: #fff !important;;
+    	text-transform: uppercase !important;;
+    	line-height: 45px;
+    	font-family: 'Roboto Condensed', sans-serif;
+	}
+
+	.navbar-collapse.in {
+   		overflow-y: visible;
+	}
 	#search-content{
-		/*max-width: 300px;*/
 		display: block;
 		position: absolute;
 		background-color: white;
@@ -47,6 +59,12 @@
 	}
 
 	#search-content a:hover {background-color: #ddd;}
+
+	li#tel{
+		float: right !important;
+	}
+
+
 </style>
 <header id="header">
 	<div class="topbar">
@@ -123,6 +141,86 @@
 			</div>
 		</div>	
 	</div>
+
+
+
+
+<nav id="mainmenu" class="navbar navbar-default">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#example-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="{{ url('/') }}">Trang chủ</a>
+		</div>
+		
+		<div class="collapse navbar-collapse" id="example-1">
+			<ul>
+				<li>
+					<a >Sản phẩm</a>
+					<i class="fa fa-caret-down" aria-hidden="true"></i>
+					<ul class="drop2">
+						@foreach($categories as $cate)
+							@if ($cate->level > 1)
+								@continue
+							@endif
+							<?php $hasChild = 0 ?>
+							@foreach($categories as $item)
+								@if($item->parent_id == $cate->id)
+									<?php $hasChild = 1 ?>
+									@break
+								@endif
+							@endforeach
+							@if ($hasChild == 0)
+								<li><a href="{{ $cate->url }}">{{ $cate->name }}</a></li>
+							@else
+								<li>
+									<a href="{{ $cate->url }}">{{ $cate->name }}</a>
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+									<ul class="drop3">
+									@foreach ($categories as $subcate)
+										@if ($subcate->parent_id == $cate->id)
+										<li><a href="{{ $subcate->url }}">{{ $subcate->name }}</a></li>
+										@endif
+									@endforeach
+									</ul>
+								</li>
+							@endif
+						@endforeach
+						<li><a href="{{ url('dien-thoai') }}">Điện thoại</a></li>
+						<li><a href="{{ url('tablet') }}">Tablet</a></li>
+						<li>
+							<a href="{{ url('phu-kien') }}">Phụ kiện</a>
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+							<ul class="drop3">
+								<li><a href="{{ url('pin-du-phong') }}">Pin dự phòng</a></li>
+								<li><a href="{{ url('op-lung') }}">Ốp lưng</a></li>
+								<li><a href="{{ url('cap-sac') }}">Cáp sạc</a></li>
+							</ul>
+						</li>
+						<li><a href="{{ url('dong-ho') }}">Đồng hồ</a></li>
+						<li><a href="{{ url('am-thanh') }}">Âm thanh</a></li>
+						<li><a href="{{ url('laptop') }}">Laptop</a></li>
+						<li><a href="{{ url('sim-so') }}">Sim số</a></li>--}}
+					</ul>
+				</li>
+
+				<li><a href="">Giới thiệu</a></li>
+				<li><a href="">Tin tức</a></li>
+				<li><a href="">Tư vấn</a></li>
+				<li><a href="{{ url('contact') }}">Liên hệ</a></li>
+				<li id="tel"><a  href="tel:01649.629.629">HOTLINE: 036.666.3616 (từ 8h-22h cả T7,CN)</a></li>
+			</ul>
+		</div>
+	
+	</div>
+</nav>
+
+<!-- 
+
 	<nav id="mainmenu" class="hidden-xs hidden-sm ">
 		<div class="container">
 			<ul class="x1">
@@ -183,4 +281,4 @@
 			</ul>
 		</div>
 	</nav>
-</header>
+</header> -->

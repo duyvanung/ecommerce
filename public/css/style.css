@@ -146,7 +146,7 @@ h1, h2, h3, h4, h5, h6{
 
 #mainmenu{
 	display: block;
-	height: 45px;
+	/* height: 45px; */
 	background: #347091;
 }
 #mainmenu ul{
@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6{
 #mainmenu ul li{
 	position: relative;
 	display: inline-block;
-	float: left;
+	/* float: left; */
 	color: #fff;
 }
 #mainmenu ul.x1 > li:last-child{

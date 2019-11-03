@@ -10,6 +10,8 @@
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" rel="stylesheet">
 	<link href="{{ asset('css/bootstrap-theme.min.css') }}" rel="stylesheet">
 
+	
+
 	<!-- AWESOME ICON FONT -->
 	<link href="{{ asset('lib/awesome/css/font-awesome.min.css') }}" rel="stylesheet">
 
