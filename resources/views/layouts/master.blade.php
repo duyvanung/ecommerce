@@ -10,7 +10,7 @@
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" rel="stylesheet">
 	<link href="{{ asset('css/bootstrap-theme.min.css') }}" rel="stylesheet">
 
-	
+
 
 	<!-- AWESOME ICON FONT -->
 	<link href="{{ asset('lib/awesome/css/font-awesome.min.css') }}" rel="stylesheet">
@@ -25,7 +25,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-	
+
 	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <!-- SLIDE CSS -->
     <link rel="stylesheet" href="{{ asset('lib/slider/default.css') }}" type="text/css" media="screen" />
@@ -36,15 +36,15 @@
     <style type="text/css">
 		body {
 			width: 100%;
-			margin: 0%;    
+			margin: 0%;
 		}
-		.container { 
-			padding: 0px;
+		.container {
+
 		}
 		.user{
 			float: right;
 		}
-		
+
     	.user .navbar-nav>li>a{
     		padding: 0 5px;
     	}
@@ -97,7 +97,7 @@
 		window.fbAsyncInit = function() {
 			FB.init({
 				xfbml            : true,
-				version          : 'v4.0'
+				version          : 'v5.0'
 			});
 		};
 
@@ -113,7 +113,7 @@
 	<!-- Your customer chat code -->
 	<div class="fb-customerchat"
 		attribution=setup_tool
-		page_id="111502383519192">
+		page_id="106349454150590">
 	</div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v4.0&appId=340845793460737&autoLogAppEvents=1"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -126,10 +126,10 @@
 		// });
 	</script>
 	<script src="{{ asset('lib/slider/jquery.nivo.slider.pack.js') }}" type="text/javascript"></script>
-	<script type="text/javascript"> 
+	<script type="text/javascript">
 		$(window).load(function() {
-		    $('#slider').nivoSlider(); 
-		}); 
+		    $('#slider').nivoSlider();
+		});
 	</script>
 
 	<!-- Owl Carousel Assets -->
@@ -229,12 +229,12 @@
 	        });
 		});
 
-		$(document).mouseup(function(e) 
+		$(document).mouseup(function(e)
 		{
 		    var container = $("#search-content a");
 
 		    // if the target of the click isn't the container nor a descendant of the container
-		    if (!container.is(e.target) && container.has(e.target).length === 0) 
+		    if (!container.is(e.target) && container.has(e.target).length === 0)
 		    {
 		        container.hide();
 		    }
@@ -244,16 +244,16 @@
 		function vi_to_en(alias) {
 		    var str = alias;
 		    str = str.toLowerCase();
-		    str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g,"a"); 
-		    str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g,"e"); 
-		    str = str.replace(/ì|í|ị|ỉ|ĩ/g,"i"); 
-		    str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g,"o"); 
-		    str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g,"u"); 
-		    str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g,"y"); 
+		    str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g,"a");
+		    str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g,"e");
+		    str = str.replace(/ì|í|ị|ỉ|ĩ/g,"i");
+		    str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g,"o");
+		    str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g,"u");
+		    str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g,"y");
 		    str = str.replace(/đ/g,"d");
 		    str = str.replace(/!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\;|\'|\"|\&|\#|\[|\]|~|\$|_|`| |{|}|\||\\/g,"-");
 		    str = str.replace(/ + /g," ");
-		    str = str.trim(); 
+		    str = str.trim();
 		    return str;
 		}
 

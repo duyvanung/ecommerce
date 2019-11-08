@@ -15,7 +15,7 @@
 				</div>
 				<div class="ct-boxft1">
 					<ul>
-						<li><a href="">Giới thiệu</a></li>
+						<li><a href="{{ url('about-us') }}">Giới thiệu</a></li>
 						<li><a href="">Chính sách & Quy định</a></li>
 					</ul>
 				</div>
@@ -26,7 +26,7 @@
 				</div>
 				<div class="ct-boxft1">
 					<ul>
-						<li><a href="">Chính sách vận chuyển</a></li>
+						<li><a href="{{ url('warranty-policy') }}">Chính sách vận chuyển</a></li>
 						<li><a href="">Chính sách thanh toán</a></li>
 						<li><a href="">Bản đồ</a></li>
 					</ul>

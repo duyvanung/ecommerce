@@ -46,7 +46,7 @@ Route::group(['middleware' => 'admin'], function () {
 
             Route::post('image-upload', 'AdminController@storeImg')->name('image.upload.post');
             Route::post('widget-upload', 'AdminController@widgetUpload')->name('widget.upload.post');
-            
+
             Route::get('ajaxRequest', 'AdminController@ajaxRequest');
             Route::post('ajaxRemoveRequest', 'AdminController@ajaxRequestPost')->name('ajaxRemove');
             Route::post('ajaxSaveRequest', 'AdminController@ajaxSavePost')->name('ajaxSave');
@@ -76,6 +76,8 @@ Route::group(['middleware' => 'admin'], function () {
 Route::prefix('/')->group(function(){
     Route::get('/','HomeController@index')->name('homepage');
     Route::get('contact','HomeController@showContact');
+    Route::get('about-us','HomeController@showAboutUs');
+    Route::get('warranty-policy','HomeController@showWarrantyPolicy');
     Route::get('product/{id}','HomeController@showProduct')->name('product-detail');
     Route::get('products','HomeController@allProducts');
     Route::get('cart','HomeController@shoppingCart')->name('shoppingCart');

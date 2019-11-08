@@ -26,8 +26,8 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct(Product $product, 
-                                Appearance $appearance, 
+    public function __construct(Product $product,
+                                Appearance $appearance,
                                 OrderDetail $orderDetail,
                                 ProductCategory $productCategory,
                                 Category $category,
@@ -52,7 +52,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-      
+
         $spmoi = $this->product->getNewProducts(10);
         $data = $this->product->getRandProducts(3);
         $slider = $this->appearance->getSliderOrderByDateUpdated();
@@ -66,12 +66,12 @@ class HomeController extends Controller
         $spbanchay = $this->orderDetail->getBestSelling(3);
 
         $categories = $this->category->getAllWithUrl();
-        return view('pages.home', ['spmoi' => $spmoi, 
-                                    'spdata'     => $data, 
-                                    'slider'     => $slider, 
-                                    'banner'     => $banner, 
-                                    'vbanner'    => $vbanner, 
-                                    'sphot'      => $sphot, 
+        return view('pages.home', ['spmoi' => $spmoi,
+                                    'spdata'     => $data,
+                                    'slider'     => $slider,
+                                    'banner'     => $banner,
+                                    'vbanner'    => $vbanner,
+                                    'sphot'      => $sphot,
                                     'categories' => $categories,
                                     'spbanchay'  => $spbanchay]);
     }
@@ -108,7 +108,7 @@ class HomeController extends Controller
         if (Session::has('products')){
             $found = 0;
             $pro = Session::pull('products', []);
-            $products = $pro; 
+            $products = $pro;
             foreach ($products as $key => $value) {
                 if ($products[$key]['pro_id'] == $req->pro_id){
                     $found = 1;
@@ -251,7 +251,7 @@ class HomeController extends Controller
                 'user_phone'   => 'required|min:10|max:11',
                 'user_email'   => 'required|email',
                 'user_address' => 'required'
-            ], 
+            ],
             [
                 'required' => ':attribute không được để trống',
                 'min'      => ':attribute quá ngắn',
@@ -299,10 +299,10 @@ class HomeController extends Controller
 
         return view('pages.products-by-cate', [
                         'category_name' => $vi_cate,
-                        'spdata' => $data, 
-                        'slider' => $slider, 
-                        'banner' => $banner, 
-                        'sphot' => $sphot, 
+                        'spdata' => $data,
+                        'slider' => $slider,
+                        'banner' => $banner,
+                        'sphot' => $sphot,
                         'categories' => $categories,
                         'spbanchay' => $spbanchay
                     ]);
@@ -320,6 +320,30 @@ class HomeController extends Controller
         $categories = $this->category->getAllWithUrl();
 
         return view('pages.contact',['sphot' => $sphot, 'spbanchay' => $spbanchay, 'categories' => $categories]);
+    }
+
+    /**
+     * Show about us page
+     *
+     * @param $req Request
+     * @return json
+     */
+    public function showAboutUs(){
+        $categories = $this->category->getAllWithUrl();
+
+        return view('pages.about-us', ['categories' => $categories]);
+    }
+
+    /**
+     * Show warranty policy page
+     *
+     * @param $req Request
+     * @return json
+     */
+    public function showWarrantyPolicy(){
+        $categories = $this->category->getAllWithUrl();
+
+        return view('pages.warranty-policy', ['categories' => $categories]);
     }
 
     /**
